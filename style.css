@@ -1,0 +1,336 @@
+:root {
+    --paper: #F4F1EA;
+    --paper: aged #e8e2d5;
+    --ink: #2B2B2B;
+    --ink-light: #6B6B6B;
+    --red-pen: #8b0000;
+    --pencil: #4A4A4A;
+    --border: #C9C1B5;
+    --highlight: #FFF9C4;
+}
+
+[data-theme="lamp"] {
+    --paper: #2B2B2B;
+    --paper: aged #1F1F1F;
+    --ink: #F4F1EA;
+    --inl-light: #B8B8B8;
+    --red-pen: #FF6B6B;
+    --pencil: #9a9a9a;
+    --border: #4A4A4A;
+    --highlight: #3A3A00;
+
+}
+
+* {
+    MARGIN:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Georgia' , serif;
+    background: var(--paper-aged);
+    color: var(--ink);
+    line-height: 1.9;
+    padding: 2rem 1rem;
+}
+
+    .journal{
+        max-width:750px;
+        margin:0 auto;
+        background:var(--paper);
+        box-shadow: 0 0 30px rgba(0,0,0,0.1), inset 0 0 100px rgba(0,0,0,0.05);
+        border: 1px solid var(--border);
+        padding: 3rem;
+        position: relative;
+    }    
+    
+    
+        .journal::before{
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 40px;
+            width: 2px;
+            height: 100%;
+            background: var(--red-pen);
+            opacity: 0.3;
+        }
+
+
+            .cover{
+                text-align: center;
+                border-bottom: 3px double var(--ink);
+                padding-bottom: 2rem;
+                margin-bottom: 3rem;
+            }
+            .entry-meta{
+                font-family: 'Courier New', Courier, monospace;
+                font-size: 0.75rem;
+                display:flex;
+                justify-content: space-between;
+                color: var(--ink-light);
+                margin-bottom: 2rem;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+            }
+
+
+            .title{
+                font-size: 2.5rem;
+                font-weight: normal;
+                line-height: 1.2;
+                margin-bottom: 1rem;
+            }
+
+
+            .subtitle{
+                font-style: italic;
+                color: var(--ink-light);
+                margin-bottom: 2rem;
+            }
+
+
+            .progress-container{
+                margin-top: 2rem;
+                text-align: left;
+            }
+
+
+            .progress-label{
+                font-family:'Courier New', Courier, monospace;
+                font-size: 0.8rem;
+                letter-spacing: 1px;
+                margin-bottom: 0.5rem;
+            }
+
+            .progress-bar{
+                background:var(--paper-aged);
+                border:1px solid var(--border);
+                height:25px;
+                position:relative;
+
+            }
+
+
+            .progress-fill{
+                background: repeating-linear-gradient(
+                    45deg,
+                    var(--ink),
+                    var(--ink)10px,
+                    var(--ink-light) 10px,
+                    var(--ink-light) 20px,
+                );
+                height:100%;
+                color:var(--paper);
+                font-family: 'Courier New', Courier, monospace;
+                font-size: 0.8rem;
+                display:flex;
+                align-items: center;
+                padding-left: 0.5rem;
+                transition: width 0.5s;
+            }
+
+
+            .progress-note{
+                font-family: 'Courier New', Courier, monospace;
+                font-size: 0.7rem;
+                color:var(--ink-light);
+                margin-top: 0.3rem;
+            }
+
+            .entry{
+                margin-bottom: 4rem;
+                position: relative;
+            }
+
+            .entry-header{
+                font-family: 'Courier New', Courier, monospace;
+                font-size: 0,8rem;
+                display: flex;
+                gap: 1.5rem;
+                margin-bottom: 1rem;
+                color: var(--ink-light);
+                border-bottom: 1px solid var(--border);
+                padding-bottom: 0.5rem;
+            }
+
+
+            .entry-status{
+                color: var(--red-pen);
+                font-weight: bold;
+            }
+
+            h2{
+                font-size:1.8rem;
+                font-weight: normal;
+                margin-bottom: 1.5rem;
+            }
+
+            h3{
+                font-size: 1.3rem;
+                font-weight: normal;
+                margin: 2rem 0 1rem;
+                color: var(--ink-light);
+            }
+
+            .handwritten-note{
+                font-family: 'Courier New', Courier, monospace;
+                font-size: 0.9rem;
+                color: var(--pencil);
+                font-style: italic;
+                margin-bottom: 1.5rem;
+            }
+
+            .margin-note{
+                font-family: 'Courier New', Courier, monospace;
+                font-size: 0.85rem;
+                background: var(--highlight);
+                padding: 0.8rem;
+                margin: 1.5rem 0;
+                border-left: 3px solid var(--red-pen);
+            }
+
+            .red-pen{
+                color: var(--red-pen);
+                font-weight: bold;
+            }
+
+            .skill-log{
+                margin: 2rem 0;
+            }
+
+            .skill-item{
+                margin-bottom: 1.2rem;
+            }
+
+            .skill-item span{
+                font-family: 'Courier New', Courier, monospace;
+                font-size: 0.9rem;
+                display: block;
+                margin-bottom: 0.3rem;
+            }
+
+            .skill-bar{
+                background: var(--paper-aged);
+                border: 1px solid var(--border);
+                height: 20px;
+            }
+
+            .skill-fill{
+                background: var(--ink);
+                height: 100%;
+                font-family: 'Courier New', Courier, monospace;
+                font-size: 0.7rem;
+                color: var(--paper);
+                display: flex;
+                align-items: center;
+                padding-left: 0.5rem;
+            }
+
+
+            .lab-notes{
+                list-style: none;
+                margin-left: 1rem;
+            }
+
+            .lab-notes li{
+                margin-bottom: 0.8rem;
+                position: relative;
+                padding-left: 1.5rem;
+            }
+
+            .lab-notes ::before{
+                content: ;
+                position: absolute;
+                left: 0;
+                color: var(--ink-light);
+            }
+
+            .artifact-stamp{
+                display: inline-block;
+                border: 2px solid var(--red-pen);
+                color: var(--red-pen);
+                font-family: 'Courier New', Courier, monospace;
+                padding: 0.3rem 0.8rem;
+                transform: rotate(-5deg);
+                font-size: 0.8rem;
+                margin-bottom: 1rem;
+            }
+
+            .artifact-links{
+                display: flex;
+                gap:2rem;
+                margin-top: 1.5rem;
+            }
+
+            .artifact-links a{
+                color:var(--ink);
+                text-decoration: none;
+                border-bottom: 1px solid var(--ink);
+            }
+
+
+            .artifact-links a:hover{
+                color:var(--red-pen);
+                border-color: var(--red-pen);
+            }
+
+            .action-buttons{
+                display: flex;
+                gap: 1rem;
+                margin: 2rem 0 1rem;
+                flex-wrap: wrap;
+            }
+
+            button{
+                background: transparent;
+                border: 1px solid var(--ink);
+                color: var(--ink);
+                padding: 0.6rem 1.2rem;
+                font-family: 'Courier New', Courier, monospace;
+                cursor: pointer;
+                font-size: 0.85rem;
+            }
+
+
+            button:hover{
+                background:var(--ink);
+                color: var(--paper);
+            }
+
+            #copy-status{
+                font-family: 'Courier New', Courier, monospace;
+                font-size: 0.8rem;
+                color: var(--red-pen);
+                display: block;
+                height: 1rem;
+            }
+
+            .colophon {
+                border-top: 3px double var(--ink);
+                padding-top: 2rem;
+                margin-top: 4rem;
+                text-align: center;
+                font-family: 'Courier New', Courier, monospace;
+                font-size: 0.7rem;
+                color:var(--ink-light);
+            }
+
+
+
+            .footer-note{
+                margin-bottom:1rem;
+                font-style: italic;
+            }
+
+
+
+            @media(max-width:768px){
+                .journal {padding:1.5rem;}
+                .journal::before{left:20px;}
+                .title{font-size: 1.8rem;}
+                .entry-meta{flex-direction: column;gap: 0.3rem;}
+                .action-buttons{flex-direction: column;}
+                button{width:100%;}
+            }
