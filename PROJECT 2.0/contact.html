@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contact Abby about projects, collaboration, or opportunities.">
+  <title>Contact | Abby</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header"><nav class="nav container" aria-label="Main navigation">
+    <a class="logo" href="index.html">AB<span>.</span></a>
+    <button class="menu-toggle" aria-label="Open navigation menu" aria-expanded="false">☰</button>
+    <div class="nav-links"><a href="index.html">Home</a><a href="about.html">About</a><a href="index.html#projects">Projects</a><a class="active" href="contact.html">Contact</a><button class="theme-toggle" type="button" aria-label="Switch colour theme">☾ <span>Theme</span></button></div>
+  </nav></header>
+  <main id="main">
+    <section class="page-hero container"><p class="eyebrow">CONTACT</p><h1>Let's make something<br><span class="accent">good happen.</span></h1><p class="hero-text">Have a question, want to collaborate, or just want to say hello? Send a message.</p></section>
+    <section class="section container contact-layout">
+      <aside class="contact-info"><p class="eyebrow">GET IN TOUCH</p><h2>I'd love to hear from you.</h2><p>Use the form to prepare a message or contact me directly by email. </p>
+        <div class="contact-detail"><span class="detail-icon">✉</span><div><small>EMAIL</small><a href="mailto:your.email@example.com">abenaasomaning2@gmail.com</a></div></div>
+        <div class="contact-detail"><span class="detail-icon">⌁</span><div><small>BASED IN</small><p>Ghana</p></div></div>
+        <div class="contact-note"><b>Good to know</b><p></p></div>
+      </aside>
+      <div class="contact-form-wrap"><form id="contact-form">
+        <div class="form-row"><div class="form-field"><label for="name">Your Name</label><input id="name" name="name" type="text" placeholder="e.g. Ama Mensah" required autocomplete="name"></div><div class="form-field"><label for="email">Your email</label><input id="email" name="email" type="email" placeholder="you@example.com" required autocomplete="email"></div></div>
+        <div class="form-field"><label for="subject">Subject</label><input id="subject" name="subject" type="text" placeholder="What would you like to discuss?" required></div>
+        <div class="form-field"><label for="message">Message</label><textarea id="message" name="message" rows="6" placeholder="Write your message here..." required></textarea></div>
+        <button class="button primary submit-button" type="submit">Prepare email <span aria-hidden="true">↗</span></button>
+        <p id="form-status" class="form-status" role="status" aria-live="polite">Thanks for contacting</p>
+      </form></div>
+    </section>
+  </main>
+  <footer class="site-footer"><div class="container footer-inner"><a class="logo" href="index.html">AB<span>.</span></a><p>Designed and built with curiosity.</p><p>© <span class="2026"></span> Abby</p></div></footer>
+</body>
+</html>
